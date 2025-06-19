@@ -13,7 +13,7 @@
 
 1. 克隆本项目：
    ```bash
-   git clone <your-repo-url>
+   git clone -b master https://github.com/ClancyLv/spring-boot3-demo.git
    ```
 2. 进入项目根目录，使用 Maven 构建：
    ```bash
