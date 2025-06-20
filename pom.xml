@@ -15,6 +15,7 @@
     <!--模块-->
     <modules>
         <module>spring-retry-demo</module>
+        <module>spring-redis-demo</module>
     </modules>
 
     <!--仓库-->

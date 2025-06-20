@@ -1,0 +1,13 @@
+spring:
+  data:
+    redis:
+      # 主机
+      host: localhost
+      # 密码
+      password: 123456
+      # 端口
+      port: 6379
+      # 数据库
+      database: 0
+      timeout: 2000
+
