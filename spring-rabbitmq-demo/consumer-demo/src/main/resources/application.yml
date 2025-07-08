@@ -1,0 +1,31 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: 123456
+    virtual-host: RootHost
+    # 消费者配置
+    listener:
+      simple:
+        # 手动确认消息
+        acknowledge-mode: MANUAL
+        # 每个消费者可能未完成的未确认消息的数量
+        prefetch: 1
+        # 消费者最小数量
+        concurrency: 3
+        # 消费者最大数量
+        max-concurrency: 10
+        # 因为项目以手动确认消息的方式为例，所以需要手动设置重试机制，没有使用RabbitMQ提供的重试机制
+#        # 是否支持重试
+#        retry:
+#          enabled: true
+#          # 最大重试次数
+#          max-attempts: 3
+#          # 第一次和第二次尝试传递消息的时间间隔
+#          initial-interval: 1000ms
+#          # 最大重试时间间隔
+#          max-interval: 10000ms
+#          # 重试间隔倍数
+#          multiplier: 2
+

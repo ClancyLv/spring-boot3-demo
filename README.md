@@ -4,6 +4,12 @@
 
 ## 项目结构
 
+- **mybatis-plus-demo**：Mybatis Plus 持久层框架示例
+  - 详见 [mybatis-plus-demo/README.md](mybatis-plus-demo/README.md)
+- **spring-rabbitmq-demo**：Spring 消息队列示例
+  - 详见 [spring-rabbitmq-demo/README.md](spring-rabbitmq-demo/README.md)
+- **spring-redis-demo**：Spring 缓存示例
+  - 详见 [spring-redis-demo/README.md](spring-redis-demo/README.md)
 - **spring-retry-demo**：Spring Retry 重试机制示例
   - 详见 [spring-retry-demo/README.md](spring-retry-demo/README.md)
 

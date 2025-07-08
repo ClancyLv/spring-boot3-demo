@@ -11,7 +11,7 @@
 
     <artifactId>mybatis-plus-demo</artifactId>
     <name>mybatis-plus-demo</name>
-    <description>示例</description>
+    <description>Mybatis Plus持久层框架示例</description>
 
     <properties>
         <mybatis-plus.version>3.5.12</mybatis-plus.version>

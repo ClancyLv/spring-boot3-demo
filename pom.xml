@@ -15,6 +15,7 @@
     <!--模块-->
     <modules>
         <module>mybatis-plus-demo</module>
+        <module>spring-rabbitmq-demo</module>
         <module>spring-retry-demo</module>
         <module>spring-redis-demo</module>
     </modules>
