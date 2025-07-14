@@ -1,0 +1,7 @@
+spring:
+  task:
+    scheduling:
+      pool:
+        # 线程池大小
+        size: 10
+      thread-name-prefix: "ScheduledTask-"

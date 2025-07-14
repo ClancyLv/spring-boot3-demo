@@ -1,0 +1,36 @@
+spring:
+  # 数据源配置
+  datasource:
+    # mysql驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-boot3-demo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true&&useOldAliasMetadataBehavior=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+  # 定时任务配置
+  quartz:
+    # 在初始化后自动启动调度程序 默认true
+    auto-startup: false
+    # 任务存储类型 默认：内存
+    job-store-type: jdbc
+    jdbc:
+      # 数据库初始化模式
+      initialize-schema: never
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: QuartzScheduler
+            instanceId: auto
+          jobStore:
+            # SpringBoot低版本 2.2.x
+            # class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            # SpringBoot高版本
+            class: org.springframework.scheduling.quartz.LocalDataSourceJobStore
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            useProperties: false
+            tablePrefix: QRTZ_
+            isClustered: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
