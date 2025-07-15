@@ -16,6 +16,7 @@
     <modules>
         <module>quartz-demo</module>
         <module>spring-schedule-demo</module>
+        <module>xxl-job-admin</module>
         <module>xxl-job-demo</module>
     </modules>
 
