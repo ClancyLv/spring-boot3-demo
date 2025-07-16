@@ -14,6 +14,7 @@
 
     <!--模块-->
     <modules>
+        <module>encrypt-data-query-demo</module>
         <module>mybatis-plus-demo</module>
         <module>spring-rabbitmq-demo</module>
         <module>spring-retry-demo</module>
