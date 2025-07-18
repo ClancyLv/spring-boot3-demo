@@ -1,9 +1,9 @@
 spring:
   # 数据源配置
   datasource:
-    # mysql驱动
+    # tidb驱动
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spring-boot3-demo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true&&useOldAliasMetadataBehavior=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    url: jdbc:mysql://localhost:4000/spring-boot3-demo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true&&useOldAliasMetadataBehavior=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
     username: root
     password: 123456
 
@@ -12,7 +12,7 @@ mybatis-plus:
   # 指定 MyBatis Mapper 对应的 XML 文件位置
   mapper-locations: classpath*:mapper/**.xml
   # 指定 MyBatis 别名包扫描路径，用于给包中的类注册别名
-  type-aliases-package: cn.clancy.mybatisplus.entity
+  type-aliases-package: cn.clancy.entity
   # 原生 MyBatis 所支持的配置
   configuration:
     # 开启驼峰命名
