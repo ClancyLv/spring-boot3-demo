@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    # 镜像版本
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    # 容器名称
+    container_name: my_sqlserver
+    # 映射端口
+    ports:
+      - "1433:1433"
+    # 环境变量
+    environment:
+      SA_PASSWORD: "Your_Password123"
+      ACCEPT_EULA: "Y"
+    volumes:
+      # 持久化数据
+      - /mnt/data/sqlserver/data:/var/opt/mssql
+    # 重启策略
+    restart: always
