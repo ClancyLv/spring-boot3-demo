@@ -1,0 +1,29 @@
+spring:
+  # 数据源配置
+  datasource:
+    # dm驱动
+    driver-class-name: dm.jdbc.driver.DmDriver
+    url: jdbc:dm://localhost:5237/SPRING-BOOT3-DEMO
+    username: SYSDBA
+    password: 123456
+
+# mybatis-plus配置
+mybatis-plus:
+  # 指定 MyBatis Mapper 对应的 XML 文件位置
+  mapper-locations: classpath*:mapper/**.xml
+  # 指定 MyBatis 别名包扫描路径，用于给包中的类注册别名
+  type-aliases-package: cn.clancy.entity
+  # 原生 MyBatis 所支持的配置
+  configuration:
+    # 开启驼峰命名
+    map-underscore-to-camel-case: true
+    #输出log
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # MyBatis-Plus 全局策略配置
+  global-config:
+    # MyBatis-Plus 全局策略中的 DB 策略配置
+    db-config:
+      # 主键生成类型：自增
+      id-type: auto
+      # 全局的 Entity 逻辑删除字段属性名，仅在逻辑删除功能打开时有效
+      logic-delete-field: del_flg

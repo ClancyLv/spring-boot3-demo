@@ -1,6 +1,6 @@
 # spring-retry-demo
 
-Spring重试示例
+本模块是基于 Spring Retry 实现的重试机制示例，演示如何通过注解方式优雅地为服务方法添加自动重试与兜底恢复能力，适用于远程调用、网络请求、数据库操作等易失败场景。
 
 # 教程
 
@@ -93,7 +93,7 @@ public class RetryServiceImpl implements RetryService {
 
     @Recover
     public boolean customRetryMethodRecover(IllegalStateException e, String str) {
-        log.info("customRetryMethod重��失败，调用recover方法，异常：{}，参数：{}", e.getMessage(), str);
+        log.info("customRetryMethod重试失败，调用recover方法，异常：{}，参数：{}", e.getMessage(), str);
         return false;
     }
 }

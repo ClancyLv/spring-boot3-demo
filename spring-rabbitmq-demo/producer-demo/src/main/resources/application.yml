@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: 123456
+    virtual-host: RootHost
+    # 开启发布确认
+    publisher-confirm-type: correlated
+    # 开启发布返回
+    publisher-returns: true
+    # 消息在没有被队列接收时是否强行退回
+    template:
+      mandatory: true
